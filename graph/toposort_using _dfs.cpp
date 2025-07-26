@@ -1,6 +1,6 @@
  #include<unordered_map>
 #include<iostream>
-#include<queue>
+#include<queue>s
 #include<stack>
 using namespace std;
 
@@ -29,7 +29,7 @@ using namespace std;
          unordered_map<int,bool>visited;    
          for(int i =0;i<V;i++){
              if(!visited[i])
-                dfstopo(i,visited,adj,s);
+                dfstopo(i,visited,adj,s);   
          }
          
         vector<int>ans;
