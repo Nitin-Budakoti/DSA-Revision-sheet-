@@ -40,7 +40,7 @@ class Graph{
         st.pop();
         distance[0]=0;
         for(auto nbr: adjList[0]){
-            // relaxation step
+            // initial  relaxation step
             if(distance[src]+nbr.second<distance[nbr.first]){
                 distance[nbr.first]= distance[src]+nbr.second;
             }
@@ -50,6 +50,7 @@ class Graph{
             st.pop();
             if(distance[top_ele]!=INT_MAX){
                 for(auto nbr: adjList[top_ele]){
+                    // relaxation steps at every node
                     if(distance[top_ele]+nbr.second<distance[nbr.first]){
                         distance[nbr.first] = distance[top_ele]+nbr.second;
                     }
